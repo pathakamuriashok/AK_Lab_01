@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PATAKAMURI ASHOK KUMAR</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">PATAKAMURI ASHOK KUMAR</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+		<li><a href="#about">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <button id="theme-toggle" class="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>
+  
+	  Hello! I'm <strong>ASHOK KUMAR</strong>,
+	  I have 9 years of experience as a QA Engineer. 
+	  
+    </p>
+    <p>
+specializing in Selenium, Java, TestNG, Maven, CI/CD Pipelines and Automation Framework Design & Scripting. I am skilled in delivering quality software through advanced automation.
+	  
+    </p>
+    <div class="social-links">
+      <a href="mailto:ashok.selenium15@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://www.linkedin.com/in/patakamuriashokkumar?" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/pathakamuriashok" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+  </section>
+
+<!-- Experience -->
+<section id="Experience" class="section fade-in">
+  <h2>Experience</h2>
+  <div class="Experience-list">
+    
+    <div class="tooltip">  
+      <div class="Experience-card">
+        <h3>Experis IT Pvt. Ltd.</h3>
+        <p>
+          I worked as a Software Tester <br>from <br><strong>September 2016 </strong><br>to <br><strong>June 2018 </strong><br>in IBM under the payroll of Experis IT Pvt. Ltd.
+        </p>
+        <span class="tooltiptext">Chennai</span>
+      </div>
+   </div>  
+
+   
+   <div class="tooltip">
+      <div class="Experience-card">
+        <h3>Hexaware Technologies</h3>
+        <p>
+          I worked as a Sr. Software Engineer from August 2018 to August 2021.
+        </p>
+        <span class="tooltiptext">Chennai</span>
+    </div>  
+    </div>
+
+    <div class="tooltip">  
+      <div class="Experience-card">
+        <h3>LTIMindtree</h3>
+        <p>
+          I am working as a Sr. Software Engineer from September 2021 to present.
+        </p>
+        <span class="tooltiptext">Hyderabad</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Projects -->
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Metlife</h3>
+        <p>
+         
+        </p>
+      </div>
+      <div class="project-card">
+        <h3>CitiBank</h3>
+        <p>
+     
+	 </p>
+      </div>
+      <div class="project-card">
+        <h3>Amazon</h3>
+        <p>
+
+
+        </p>
+      </div>
+	  <div class="project-card">
+        <h3>Microsoft</h3>
+        <p>
+     
+
+	 </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fas fa-selenium"></i><h3>Selenium</h3></div>
+	  <div class="skill-card"><i class="fa-brands fa-java"></i><h3>Java</h3></div> 
+      <div class="skill-card"><i class="fab fa-testng"></i><h3>TestNG</h3></div>
+      <div class="skill-card"><i class="fas fa-maven"></i><h3>Maven</h3></div>
+      <div class="skill-card"><i class="fab fa-js-square"></i><h3>JavaScript</h3></div>
+      <div class="skill-card"><i class="fas fa-cucumber"></i><h3>Cucumber</h3></div>
+      <div class="skill-card"><i class="fab fa-git-alt"></i><h3>Git & GitHub</h3></div>
+      <div class="skill-card"><i class="fab fa-SQL"></i><h3>SQL</h3></div>
+      <div class="skill-card"><i class="fas fa-restassured"></i><h3>RestAssured</h3></div>
+      <div class="skill-card"><i class="fab fa-python"></i><h3>Python</h3></div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="section fade-in">
+    <h2>Resume</h2>
+    <div class="resume-box">
+      <p>Download my updated resume below:</p>
+      <a href="Ravi_Harinath.pdf" target="_blank" class="btn" download>
+        <i class="fas fa-file-download"></i> Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section fade-in">
+    <h2>Contact Me</h2>
+    <form id="contactForm" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="formMessage" class="success-message"></p>
+  </section>
+
+  
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PATHAKAMURI ASHOK KUMAR. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
