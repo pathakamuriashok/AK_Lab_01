@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-11T00:03:12 IST" name="Default suite" finished-at="2025-10-11T00:03:23 IST" duration-ms="11912">
+  <suite started-at="2025-10-11T15:53:59 IST" name="Default suite" finished-at="2025-10-11T15:54:24 IST" duration-ms="24496">
     <groups>
     </groups>
-    <test started-at="2025-10-11T00:03:12 IST" name="Default test" finished-at="2025-10-11T00:03:23 IST" duration-ms="11912">
+    <test started-at="2025-10-11T15:53:59 IST" name="Default test" finished-at="2025-10-11T15:54:24 IST" duration-ms="24496">
       <class name="QA.AK.DriverSetUP.BrowserLaunch">
-        <test-method signature="DriverSetUp()[pri:0, instance:QA.AK.DriverSetUP.BrowserLaunch@222545dc]" started-at="2025-10-11T00:03:12 IST" name="DriverSetUp" finished-at="2025-10-11T00:03:23 IST" duration-ms="11849" status="PASS">
+        <test-method signature="DriverSetUp()[pri:0, instance:QA.AK.DriverSetUP.BrowserLaunch@f6efaab]" started-at="2025-10-11T15:53:59 IST" name="DriverSetUp" finished-at="2025-10-11T15:54:24 IST" duration-ms="24409" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverSetUp -->

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [Suite]">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
+    <classes>
+      <class name="QA.AK.DriverSetUP.BrowserLaunch">
+        <methods>
+          <include name="DriverSetUp"/>
+        </methods>
+      </class> <!-- QA.AK.DriverSetUP.BrowserLaunch -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
