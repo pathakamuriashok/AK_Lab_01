@@ -1,8 +1,9 @@
 package QA.AK;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.Test;
+import static org.testng.Assert.assertTrue;
+
+
 
 /**
  * Unit test for simple App.
@@ -12,7 +13,7 @@ public class AppTest {
     /**
      * Rigorous Test :-)
      */
-    @Test
+    @org.testng.annotations.Test
     public void shouldAnswerWithTrue() {
         assertTrue(true);
     }
