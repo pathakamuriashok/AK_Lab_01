@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="QA.AK.DriverSetUP.BrowserLaunch">
+      <class name="QA.AK.TestCases.TC_001">
         <methods>
-          <include name="DriverSetUp"/>
+          <include name="m1"/>
+          <include name="m2"/>
         </methods>
-      </class> <!-- QA.AK.DriverSetUP.BrowserLaunch -->
+      </class> <!-- QA.AK.TestCases.TC_001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

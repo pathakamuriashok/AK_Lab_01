@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-12T11:43:39 IST" name="Suite" finished-at="2025-10-12T11:43:52 IST" duration-ms="12641">
+  <suite started-at="2025-10-18T23:53:52 IST" name="Suite" finished-at="2025-10-18T23:54:06 IST" duration-ms="13667">
     <groups>
     </groups>
-    <test started-at="2025-10-12T11:43:39 IST" name="Test" finished-at="2025-10-12T11:43:52 IST" duration-ms="12641">
-      <class name="QA.AK.DriverSetUP.BrowserLaunch">
-        <test-method signature="DriverSetUp()[pri:0, instance:QA.AK.DriverSetUP.BrowserLaunch@4f83df68]" started-at="2025-10-12T11:43:39 IST" name="DriverSetUp" finished-at="2025-10-12T11:43:52 IST" duration-ms="12570" status="PASS">
+    <test started-at="2025-10-18T23:53:52 IST" name="Test" finished-at="2025-10-18T23:54:06 IST" duration-ms="13667">
+      <class name="QA.AK.TestCases.TC_001">
+        <test-method is-config="true" signature="m1()[pri:0, instance:QA.AK.TestCases.TC_001@77888435]" started-at="2025-10-18T23:53:52 IST" name="m1" finished-at="2025-10-18T23:53:56 IST" duration-ms="3764" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DriverSetUp -->
-      </class> <!-- QA.AK.DriverSetUP.BrowserLaunch -->
+        </test-method> <!-- m1 -->
+        <test-method signature="m2()[pri:0, instance:QA.AK.TestCases.TC_001@77888435]" started-at="2025-10-18T23:53:56 IST" name="m2" finished-at="2025-10-18T23:54:05 IST" duration-ms="9493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- m2 -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:QA.AK.TestCases.TC_001@77888435]" started-at="2025-10-18T23:54:05 IST" name="quit" finished-at="2025-10-18T23:54:06 IST" duration-ms="337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- QA.AK.TestCases.TC_001 -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

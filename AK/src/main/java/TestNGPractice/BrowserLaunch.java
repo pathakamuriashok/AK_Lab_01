@@ -1,4 +1,4 @@
-package QA.AK.DriverSetUP;
+package TestNGPractice;
 
 import java.io.File;
 import java.io.IOException;
