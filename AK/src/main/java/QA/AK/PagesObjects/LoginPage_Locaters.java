@@ -1,4 +1,4 @@
-package QA.AK.Pages;
+package QA.AK.PagesObjects;
 
 import org.openqa.selenium.By;
 
@@ -6,10 +6,10 @@ import org.openqa.selenium.By;
  * @author PATHAKAMURI ASHOK KUMAR
  * This page will have all Login Page locater information 
  */
-public class LoginPage 
+public class LoginPage_Locaters 
 {
 
-	// if user create Locater with Public , then user can call locater by create object for this call 
+	// if user create Locater with Public , then user can call locater by create object for this class
 	public By Username=By.name("username");
 	
 	

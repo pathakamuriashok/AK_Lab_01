@@ -2,24 +2,28 @@ package QA.AK.Utilities;
 
 import java.time.Duration;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import QA.AK.DriverSetUP.DriverFactory;
 
 /**
  * @author PATHAKAMURI ASHOK KUMAR
  * This class will helps to get the Web Element actions 
  */
-public class ElementActions 
+public class ElementActions extends DriverFactory
 {
 	private WebDriver driver;
     private WebDriverWait wait;
     
 	public ElementActions(WebDriver driver)  
 	{
-		this.driver=driver;
+		//this.driver=driver;
+		//driver=this.driver;
+		driver=DriverFactory.getDriver();
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 	}
 	

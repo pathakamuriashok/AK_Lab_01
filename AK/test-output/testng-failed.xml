@@ -5,9 +5,10 @@
     <classes>
       <class name="QA.AK.TestCases.TC_001">
         <methods>
-          <include name="m1"/>
           <include name="quit"/>
-          <include name="m2"/>
+          <include name="IntiateDriver"/>
+          <include name="LoginLogics"/>
+          <include name="URLLaunch"/>
         </methods>
       </class> <!-- QA.AK.TestCases.TC_001 -->
     </classes>

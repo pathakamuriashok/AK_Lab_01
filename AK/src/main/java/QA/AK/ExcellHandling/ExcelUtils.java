@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellValue;
@@ -27,6 +29,7 @@ public class ExcelUtils
 	   
 	   static HashMap<String, HashMap<String, String>> dataMap ;
 	   
+	   static HashSet<String> TestCaseName_Yes=new HashSet<String>();
 	   
        public XSSFSheet ExcellFile(String filepath,String fileName,String fileExtentio,String SheetName) throws IOException
        {
@@ -61,17 +64,29 @@ public class ExcelUtils
        public static  HashMap<String, HashMap<String, String>> GetCellvalues()
        {
     	   
-           dataMap = new HashMap<>();
-           
+            dataMap = new HashMap<>();
+         //  String tcNo=null;
            // Loop rows (skip header)
            for (int r = 1; r <= LastRow; r++) {
 
         	   row = ws.getRow(r);
                 
                if (row == null) continue;
-
-               String tcNo = row.getCell(0).getStringCellValue(); // TC_NO
-                     
+               
+              // String RunMode = getCellValueType(row.getCell(1));
+        
+               String tcNo = getCellValueType(row.getCell(0)); ; // TC_NO
+               
+				/*
+				 * if (RunMode.equalsIgnoreCase("YES")) {
+				 * 
+				 * tcNo = getCellValueType(row.getCell(0)); ; // TC_NO
+				 * TestCaseName_Yes.add(tcNo);
+				 * 
+				 * }
+				 */
+           
+                      
                HashMap<String, String> rowData = new HashMap<>();
 
                for (int c = 1; c < NumberOfCells; c++) {
@@ -83,27 +98,41 @@ public class ExcelUtils
 
                dataMap.put(tcNo, rowData);
            }
+           System.out.println(" TC with YES ::::: "+dataMap);  
       
            return dataMap;
     	   
        }
        
-		  public static String GetData(String tcid,String header) { 
-		    
+		  public static String GetData(String tcid,String header) throws IOException {   
+		
+			  ExcelUtils data=new ExcelUtils();
+			  data.ExcellFile("D:\\Git\\Lab1 git\\AK\\Data\\", "Data",".xlsx", tcid); 
+			  
 			  String value="";
 		  HashMap<String, HashMap<String,String>> dataMap1 = new HashMap<>(); 
 		  
 		  dataMap1=GetCellvalues();
-	    
+		 	  try {
+				  value=dataMap1.get(tcid).get(header);
+			} catch (Exception e) {
+				e.printStackTrace();
+				System.out.println();
+				String s=e.getMessage();
+				Message(s);
+			}
+		
+			/*
+			 * if (dataMap1.containsKey(tcid)) { try { value=dataMap1.get(tcid).get(header);
+			 * } catch (Exception e) { e.printStackTrace(); System.out.println(); String
+			 * s=e.getMessage(); Message(s); } } else { System.out.
+			 * println("User did not select this test case with Run Mode 'YES' : Please check Data sheet and update Run Mode as YES if your want run this test case"
+			 * );
+			 * 
+			 * }
+			 */
 		  
-		  try {
-			  value=dataMap1.get(tcid).get(header);
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println();
-			String s=e.getMessage();
-			Message(s);
-		}
+		  
 		  return value;
 		  
 		  }
@@ -190,4 +219,38 @@ public class ExcelUtils
            System.out.println();
 		
        }
+       
+       /**
+        *  
+        *  
+       public static  HashMap<String, HashMap<String, String>> GetCellvalues()
+       {
+    	   
+           dataMap = new HashMap<>();
+           
+           // Loop rows (skip header)
+           for (int r = 1; r <= LastRow; r++) {
+
+        	   row = ws.getRow(r);
+                
+               if (row == null) continue;
+
+               String tcNo = row.getCell(0).getStringCellValue(); // TC_NO
+                     
+               HashMap<String, String> rowData = new HashMap<>();
+
+               for (int c = 1; c < NumberOfCells; c++) {
+         
+            	   String header = headers.get(c);
+                   String value=getCellValueType(row.getCell(c));
+                   rowData.put(header, value);
+               }
+
+               dataMap.put(tcNo, rowData);
+           }
+      
+           return dataMap;
+    	   
+       }
+        */
 }

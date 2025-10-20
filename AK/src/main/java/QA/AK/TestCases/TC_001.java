@@ -1,46 +1,50 @@
 package QA.AK.TestCases;
 
+import java.io.IOException;
+
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import QA.AK.DriverSetUP.BaseTest;
+import QA.AK.DriverSetUP.DriverFactory;
 import QA.AK.ExcellHandling.ExcelUtils;
-import QA.AK.Pages.LoginPage;
-import QA.AK.Utilities.ElementActions;
+import QA.AK.PageBusinessLogics.LoginPage;
 
-public class TC_001 extends BaseTest
+public class TC_001 extends DriverFactory
 {
+
+		
 	
-	LoginPage loginpage=new LoginPage();
+	@BeforeClass
 	
-	//ExcelUtils data=new ExcelUtils();
+	public void IntiateDriver()
+	{
+		  initDriver("chrome");  
+	}
 	
+	 @BeforeMethod
+	  
+	  public void URLLaunch() throws IOException {
 	
-	ElementActions a;
-	
-         @BeforeMethod
-         public void m1()
-         {
-        	 DriverSetUP("chrome");
-        	 a=new ElementActions(driver);
-        	  
-         }
+		 driver.get(ExcelUtils.GetData("TC_001", "URL"));  
+	 	 Assert.assertEquals(true, driver.getTitle().equals("OrangeHRM"));
+	 }
+
          @Test
-         public void m2()
-         {
-        	 EnterURL("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        //	 EnterURL(ExcelUtils.GetData("TC_001", "URL").toString());
-        	 Assert.assertEquals(true, driver.getTitle().equals("OrangeHRM"));
-        	 a.EnterText(loginpage.Username,ExcelUtils.GetData("TC_001", "UserName"));  
-        	 a.EnterText(loginpage.Psw(), ExcelUtils.GetData("TC_001", "Password"));         
-        	 a.Click(loginpage.LoginBtn); 
-             
+         public void LoginLogics() throws IOException, InterruptedException
+         {  
+        	 
+        	 LoginPage loginpage=new LoginPage(driver,"TC_001");	
+        	 
+          	 loginpage.login();
+         
          }
          @AfterMethod
          public void quit()
          {
-        	 quitDriver();
+        	 //quitDriver();
+        	 driver.quit();
          }
 }
