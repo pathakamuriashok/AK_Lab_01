@@ -1,8 +1,6 @@
 package QA.AK.TestCases;
 
 import java.io.IOException;
-
-
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -14,8 +12,6 @@ import QA.AK.PageBusinessLogics.LoginPage;
 
 public class TC_001 extends DriverFactory
 {
-
-		
 	
 	@BeforeClass
 	
@@ -44,7 +40,6 @@ public class TC_001 extends DriverFactory
          @AfterMethod
          public void quit()
          {
-        	 //quitDriver();
         	 driver.quit();
          }
 }

@@ -1,0 +1,11 @@
+<library>
+
+  <Data_xl_path>D:\\Git\\Lab1 git\\AK\\Data\\</Data_xl_path>
+
+  <XLFile_Name>Data</XLFile_Name>
+  
+  <XLFile_Extention>.xlsx</XLFile_Extention>
+  
+  <XLSheetName>TC_001</XLSheetName>
+  
+</library>

@@ -29,9 +29,7 @@ public class ExcelUtils
 	   
 	   static HashMap<String, HashMap<String, String>> dataMap ;
 	   
-	   static HashSet<String> TestCaseName_Yes=new HashSet<String>();
-	   
-       public XSSFSheet ExcellFile(String filepath,String fileName,String fileExtentio,String SheetName) throws IOException
+	   public XSSFSheet ExcellFile(String filepath,String fileName,String fileExtentio,String SheetName) throws IOException
        {
     	   fin=new FileInputStream(filepath+fileName+fileExtentio);
     	   wb=new XSSFWorkbook(fin);
@@ -65,28 +63,16 @@ public class ExcelUtils
        {
     	   
             dataMap = new HashMap<>();
-         //  String tcNo=null;
-           // Loop rows (skip header)
-           for (int r = 1; r <= LastRow; r++) {
+       
+            for (int r = 1; r <= LastRow; r++) {
 
         	   row = ws.getRow(r);
                 
                if (row == null) continue;
                
-              // String RunMode = getCellValueType(row.getCell(1));
-        
-               String tcNo = getCellValueType(row.getCell(0)); ; // TC_NO
-               
-				/*
-				 * if (RunMode.equalsIgnoreCase("YES")) {
-				 * 
-				 * tcNo = getCellValueType(row.getCell(0)); ; // TC_NO
-				 * TestCaseName_Yes.add(tcNo);
-				 * 
-				 * }
-				 */
            
-                      
+               String tcNo = getCellValueType(row.getCell(0)); ; // TC_NO
+            
                HashMap<String, String> rowData = new HashMap<>();
 
                for (int c = 1; c < NumberOfCells; c++) {
@@ -107,7 +93,10 @@ public class ExcelUtils
 		  public static String GetData(String tcid,String header) throws IOException {   
 		
 			  ExcelUtils data=new ExcelUtils();
-			  data.ExcellFile("D:\\Git\\Lab1 git\\AK\\Data\\", "Data",".xlsx", tcid); 
+			 // data.ExcellFile("D:\\Git\\Lab1 git\\AK\\Data\\", "Data",".xlsx", "TC_001"); 
+				data.ExcellFile(GetTagName.GetXMLTagValue("Data_xl_path"), GetTagName.GetXMLTagValue("XLFile_Name"),
+						GetTagName.GetXMLTagValue("XLFile_Extention"), GetTagName.GetXMLTagValue("XLSheetName"));  
+			  
 			  
 			  String value="";
 		  HashMap<String, HashMap<String,String>> dataMap1 = new HashMap<>(); 

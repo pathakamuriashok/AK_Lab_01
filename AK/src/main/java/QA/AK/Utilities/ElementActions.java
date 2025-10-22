@@ -40,6 +40,7 @@ public class ElementActions extends DriverFactory
     	 try {
     		
     		 element=driver.findElement(locater);  
+    		 element.clear();
     		 element.sendKeys(value);  
     		 
 		} catch (Exception e) {
@@ -60,11 +61,12 @@ public class ElementActions extends DriverFactory
      {
     	 WebElement element;
     	 try {
-    		 element=driver.findElement(locater);
+    		 element=wait.until(ExpectedConditions.elementToBeClickable(locater));    		
     		 element.click();
+
 		} catch (Exception e) {
-			element=wait.until(ExpectedConditions.elementToBeClickable(locater));
-			element.click();
+			 element=driver.findElement(locater);
+			 element.click();
 			e.printStackTrace();
 			e.getMessage();
 		}
