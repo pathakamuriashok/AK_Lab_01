@@ -21,6 +21,8 @@ public class Check {
 		System.out.println("=====> "+str2);
 		System.out.println("=====> "+str3);
 		
+		String ss=System.getProperty("user.dir");
+		System.out.println("=========================================================== "+ss);
 		
 	}
 

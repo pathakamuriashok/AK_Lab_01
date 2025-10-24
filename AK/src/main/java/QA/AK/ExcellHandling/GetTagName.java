@@ -8,6 +8,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 
 
+/**
+ * @author PATHAKAMURI ASHOK KUMAR
+ * This class will be help's to get the value from XML file with the help of tag name
+ */
 public class GetTagName 
 {
     
@@ -19,8 +23,10 @@ public class GetTagName
     			try {
     				
     				// Method to get the xml tag value from any given xml
+    				
+    				String Tags=System.getProperty("user.dir");
     					
-    				File f = new File("D:\\Git\\Lab1 git\\AK\\Data\\Tags.xml");
+    				File f = new File(Tags+"\\Data\\Tags.xml");
     				
     				DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
     				
@@ -31,12 +37,12 @@ public class GetTagName
     					
     				}
     			 catch (Exception e) {
-    				// TODO Auto-generated catch block
+    				System.out.println("Kindly check your xml file !!!!!!!!!!!!");
     				e.printStackTrace();
     			}
     			
     			return val;
     			
-    		}
+    	 }
      }
 
