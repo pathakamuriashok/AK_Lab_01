@@ -1,7 +1,6 @@
 package QA.AK.ExcellHandling;
 
 import java.io.File;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -33,8 +32,7 @@ public class GetTagName
     				Document doc = docBuilder.parse(f);
     				
     				val = doc.getElementsByTagName(tagname).item(0).getTextContent();  
-    				
-    					
+    				    					
     				}
     			 catch (Exception e) {
     				System.out.println("Kindly check your xml file !!!!!!!!!!!!");
@@ -45,4 +43,3 @@ public class GetTagName
     			
     	 }
      }
-

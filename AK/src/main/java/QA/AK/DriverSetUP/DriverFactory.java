@@ -12,7 +12,6 @@ public class DriverFactory
 {
 	public static WebDriver driver;
  
-	
 	 public static void initDriver(String browser) {
 	      
 		   try {

@@ -38,7 +38,7 @@ public class ElementActions extends DriverFactory
     	 WebElement element;
     	
     	 try {
-    		
+    		 
     		 element=driver.findElement(locater);  
     		 element.clear();
     		 element.sendKeys(value);  
@@ -70,5 +70,26 @@ public class ElementActions extends DriverFactory
 			e.printStackTrace();
 			e.getMessage();
 		}
+     }
+     /**
+  	 * This Method will helps to Get the Text from the web page
+  	 * @param locater
+  	 * @author PATHAKAMURI ASHOK KUMAR
+  	 */
+     public String GetText(By locater) 
+     {
+    	 WebElement element;
+    	 String text="";
+    	 try {
+    		 element=driver.findElement(locater);  	
+    		 text=element.getText();
+
+		} catch (Exception e) {
+			 element=wait.until(ExpectedConditions.visibilityOfElementLocated(locater));
+		 	 text=element.getText();
+			 e.printStackTrace();
+			 e.getMessage();
+		}
+    	 return text;
      }
 }

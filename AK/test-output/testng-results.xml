@@ -2,28 +2,36 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-22T23:34:31 IST" name="Suite" finished-at="2025-10-22T23:34:48 IST" duration-ms="16618">
+  <suite started-at="2025-12-11T06:36:43 IST" name="Default suite" finished-at="2025-12-11T06:37:09 IST" duration-ms="26067">
     <groups>
     </groups>
-    <test started-at="2025-10-22T23:34:31 IST" name="Test" finished-at="2025-10-22T23:34:48 IST" duration-ms="16618">
+    <test started-at="2025-12-11T06:36:43 IST" name="Default test" finished-at="2025-12-11T06:37:09 IST" duration-ms="26067">
       <class name="QA.AK.TestCases.TC_001">
-        <test-method is-config="true" signature="IntiateDriver()[pri:0, instance:QA.AK.TestCases.TC_001@74235045]" started-at="2025-10-22T23:34:31 IST" name="IntiateDriver" finished-at="2025-10-22T23:34:35 IST" duration-ms="4040" status="PASS">
+        <test-method is-config="true" signature="Report()[pri:0, instance:QA.AK.TestCases.TC_001@45752059]" started-at="2025-12-11T06:36:42 IST" name="Report" finished-at="2025-12-11T06:36:43 IST" duration-ms="727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report -->
+        <test-method is-config="true" signature="IntiateDriver()[pri:0, instance:QA.AK.TestCases.TC_001@45752059]" started-at="2025-12-11T06:36:43 IST" name="IntiateDriver" finished-at="2025-12-11T06:36:51 IST" duration-ms="8483" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IntiateDriver -->
-        <test-method is-config="true" signature="URLLaunch()[pri:0, instance:QA.AK.TestCases.TC_001@74235045]" started-at="2025-10-22T23:34:35 IST" name="URLLaunch" finished-at="2025-10-22T23:34:42 IST" duration-ms="7393" status="PASS">
+        <test-method is-config="true" signature="URLLaunch()[pri:0, instance:QA.AK.TestCases.TC_001@45752059]" started-at="2025-12-11T06:36:51 IST" name="URLLaunch" finished-at="2025-12-11T06:37:00 IST" duration-ms="8740" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- URLLaunch -->
-        <test-method signature="LoginLogics()[pri:0, instance:QA.AK.TestCases.TC_001@74235045]" started-at="2025-10-22T23:34:42 IST" name="LoginLogics" finished-at="2025-10-22T23:34:45 IST" duration-ms="2776" status="PASS">
+        <test-method signature="LoginLogics()[pri:0, instance:QA.AK.TestCases.TC_001@45752059]" started-at="2025-12-11T06:37:00 IST" name="LoginLogics" finished-at="2025-12-11T06:37:09 IST" duration-ms="8404" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginLogics -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:QA.AK.TestCases.TC_001@74235045]" started-at="2025-10-22T23:34:45 IST" name="quit" finished-at="2025-10-22T23:34:48 IST" duration-ms="2329" status="PASS">
+        <test-method is-config="true" signature="quit()[pri:0, instance:QA.AK.TestCases.TC_001@45752059]" started-at="2025-12-11T06:37:09 IST" name="quit" finished-at="2025-12-11T06:37:09 IST" duration-ms="363" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
+        <test-method is-config="true" signature="reportend()[pri:0, instance:QA.AK.TestCases.TC_001@45752059]" started-at="2025-12-11T06:37:09 IST" name="reportend" finished-at="2025-12-11T06:37:10 IST" duration-ms="854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportend -->
       </class> <!-- QA.AK.TestCases.TC_001 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
